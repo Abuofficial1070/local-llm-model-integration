@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Chat</title>
+</head>
+<body>
+    <h1>Ask Questions About PDF</h1>
+    
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        
+        <label>Upload PDF:</label>
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <br><br>
+        
+        <label>Model:</label>
+        <select name="model">
+            <option>tinyllama</option>
+            <option>mistral</option>
+        </select>
+        <br><br>
+        
+        <label>Your Question:</label>
+        <textarea name="question" rows="5" cols="40" required></textarea>
+        <br><br>
+        
+        <button type="submit">Get Answer</button>
+    </form>
+</body>
+</html>
